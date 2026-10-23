@@ -1,0 +1,68 @@
+/* TEMPO — official brandbook implementation (2024), pages 5, 8, 11, 14, 16, 18-19.
+   Real extracted logo assets are in /public/images/brand/; no logo recreation.
+   Axiforma requires its own licensed font installation (not bundled in this project).
+*/
+:root {
+  --navy: #154968;
+  --navy-deep: #103D58;
+  --navy-dark: #0D3047;
+  --red: #EF3935;
+  --red-dark: #D52D2A;
+  --water-blue: #54A2D9;
+  --ink: #154968;
+  --muted: #607A8A;
+  --offwhite: #F5F8FA;
+  --line: #D8E4EA;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+  font-family: 'Axiforma', 'Helvetica Neue', system-ui, sans-serif;
+}
+body { background: #fff; color: var(--ink); }
+/* Keep the original logo in its approved proportion, with actual breathing room. */
+.tempo-logo--official { display: inline-flex; align-items: center; justify-content: flex-start; flex: 0 0 auto; padding: 4px 8px; line-height: 1; }
+.tempo-logo--official img { display: block; height: auto; width: clamp(137px, 13vw, 179px); object-fit: contain; }
+.tempo-logo--official.logo-compact img { width: 143px; }
+.site-footer .tempo-logo--official img { width: 196px; }
+@media (max-width: 480px) { .tempo-logo--official {padding: 2px 4px;} .tempo-logo--official img {width: 131px;} }
+/* Nav and branded buttons */
+.header-topline { background: var(--navy-deep); }
+.site-header { border-color: rgba(21,73,104,.1); }
+.header-nav a.nav-active { color: var(--red); }
+.button-red, .header-cta, .footer-talk { background: var(--red); color:#fff; }
+.button-red:hover, .header-cta:hover, .footer-talk:hover { background: var(--red-dark); }
+.button, .category-filter button, .footer-talk { border-radius: var(--radius-pill); }
+/* Luxury consistent card spacing and surfaces (also fixes attached old cards). */
+.advantages-grid { gap: 20px; border: 0; align-items: stretch; }
+.advantage-card { border: 1px solid rgba(255,255,255,.21) !important; border-radius: var(--radius-lg); padding: 28px; overflow:hidden; height:100%; background:rgba(255,255,255,.035); transition:transform .35s ease, background .35s ease,border-color .35s ease !important; }
+.advantage-card:last-child { border-right:1px solid rgba(255,255,255,.21) !important; }
+.advantage-card:hover {transform:translateY(-5px);border-color:rgba(84,162,217,.68)!important;background:rgba(255,255,255,.08);}
+.advantage-icon { border-radius: var(--radius-sm); color:var(--red); }
+.product-card { border-radius: var(--radius-lg); }
+.product-visual { border-radius: var(--radius-md); }
+.product-promo,.home-contact-inner {border-radius:var(--radius-xl)}
+.home-contact-promo { padding-top: 64px; }
+.contact-form-card,.order-side { border-radius:28px; }
+.map-frame,.contact-method {border-radius:20px;}
+/* Officially colored pipe-tunnel intro, preserving existing animation behavior. */
+.tempo-intro {background:var(--navy);}
+.tempo-intro-official-logo { display:block;width:min(72vw, 480px);height:auto;max-height:150px;object-fit:contain;filter:none; }
+.tempo-intro-brand {gap:0;max-width:calc(100vw - 32px);}
+.tempo-intro-brand p {max-width:520px;margin:24px auto 0;letter-spacing:.025em;font-size:clamp(11px,1.5vw,15px);line-height:1.65;font-weight:600;color:#E1EEF6;text-transform:none;}
+.tempo-intro-ring:nth-of-type(5n),.hero-motion-ring--inner {border-color:var(--red);}
+.tempo-intro-progress span {background:var(--red);}
+.hero-content h1 span,.banner-content h1 em,.home-contact-inner h2 em {color:#EF4D49;}
+/* Generic visual identity: a light technical-grid motif echoes the official curves, not the logo itself. */
+.hero-motion-ring--outer {border-color:rgba(84,162,217,.44);}
+.hero-motion-ring--middle {border-color:rgba(197,228,243,.56);}
+@media(max-width: 760px) {
+  .advantage-card{min-height:210px;}
+  .home-contact-promo{padding-top:44px;}
+}
+@media(max-width: 480px) {
+  .advantage-card{border:1px solid rgba(255,255,255,.21)!important;padding:23px;min-height:200px;}
+  .home-contact-promo{padding-top:32px;}
+}
+@media(prefers-reduced-motion:reduce){.advantage-card:hover{transform:none}}

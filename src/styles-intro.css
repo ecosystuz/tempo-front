@@ -1,0 +1,100 @@
+
+/* ========================================================================== */
+/* TEMPO — first-visit Pipe Tunnel Zoom intro and image-free hero visual       */
+/* ========================================================================== */
+body.intro-open { overflow: hidden !important; }
+.tempo-intro {
+  position: fixed; inset: 0; z-index: 9999; overflow: hidden; isolation: isolate;
+  background: #0a263a; color: #f5fbff; display: grid; place-items: center;
+  transform: translate3d(0,0,0); opacity: 1;
+  transition: transform .56s cubic-bezier(.76,0,.24,1),opacity .56s ease;
+}
+.tempo-intro--exit { transform: translate3d(0,-101%,0); opacity: .97; pointer-events: none; }
+.tempo-intro-grid {
+  position: absolute; inset: 0; opacity: .26; pointer-events: none;
+  background-image: linear-gradient(rgba(135,197,226,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(135,197,226,.12) 1px,transparent 1px);
+  background-size: 76px 76px; mask-image: radial-gradient(circle,#000 8%,transparent 76%);
+}
+.tempo-intro-light {
+  position: absolute; inset: -50%; pointer-events: none;
+  background: radial-gradient(ellipse at center,rgba(42,117,156,.38),transparent 43%);
+}
+.tempo-intro-target { width: min(82vmin,710px);aspect-ratio:1;position:relative;perspective:620px;transform-style:preserve-3d; }
+.tempo-intro-ring {
+  position:absolute;inset:11%;border-radius:50%;border:clamp(13px,2.8vmin,27px) solid #7cabbf;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.60), inset 0 0 22px rgba(4,18,30,.95),0 0 0 2px rgba(227,246,255,.32),0 0 43px rgba(29,129,187,.22);
+  background: radial-gradient(circle,rgba(8,31,46,.05) 55%,rgba(6,27,43,.53) 100%);
+  opacity: 0; transform: translateZ(-700px) scale(.45);
+  animation: tempoRingFly 1.5s cubic-bezier(.12,.36,.48,1) forwards;
+  animation-delay: calc(var(--ring-index) * 115ms);
+  will-change:transform,opacity;
+}
+.tempo-intro-ring:nth-of-type(4n) {border-color:#b2ccda}
+.tempo-intro-ring:nth-of-type(5n){border-color:#EF3935;box-shadow:inset 0 0 12px rgba(0,0,0,.8),0 0 45px rgba(255,46,83,.35)}
+.tempo-intro-axis { position:absolute;opacity:.26;pointer-events:none; }
+.tempo-intro-axis--h {width:115%;height:1px;background:#b9d7eb;top:50%;left:-7.5%}
+.tempo-intro-axis--v {height:115%;width:1px;background:#b9d7eb;left:50%;top:-7.5%}
+.tempo-intro-center {position:absolute;inset:45%;border:1px solid #bfe6fc;opacity:.2;border-radius:50%}
+@keyframes tempoRingFly {
+  0% {transform:translateZ(-720px) scale(.35);opacity:0}
+  15% {opacity:.87}
+  72% {opacity:.84}
+  100% {transform:translateZ(470px) scale(1.55);opacity:0}
+}
+.tempo-intro-brand {
+  position:absolute;z-index:3;text-align:center;display:flex;flex-direction:column;align-items:center;
+  opacity:0; transform:translateY(20px) scale(.95);
+  transition:opacity .46s,transform .52s cubic-bezier(.2,.65,.2,1);
+}
+.tempo-intro--brand .tempo-intro-brand,.tempo-intro--exit .tempo-intro-brand {opacity:1;transform:translateY(0) scale(1)}
+.tempo-intro-mark {width:68px;height:68px;border-radius:19px;background:linear-gradient(145deg,#184d6b,#0c3450);border:1px solid #5689a4;position:relative;display:grid;place-items:center;margin-bottom:22px;box-shadow:0 20px 65px rgba(0,0,0,.25)}
+.tempo-intro-mark-t {font-size:47px;line-height:1;color:#fff;font-weight:900;font-family:Arial,sans-serif;font-style:italic}
+.tempo-intro-mark-dot {width:10px;height:10px;background:#EF3935;border-radius:3px;position:absolute;right:14px;top:14px}
+.tempo-intro-brand strong {font-family:'Axiforma','Helvetica Neue',Arial,sans-serif;font-size:clamp(44px,10vmin,100px);font-weight:900;line-height:1;letter-spacing:-.085em}
+.tempo-intro-brand strong span {display:block;font-size:clamp(13px,2vmin,20px);letter-spacing:.56em;margin:16px 0 0 .55em;font-weight:700;color:#b8d3e2}
+.tempo-intro-brand p {font-size:clamp(10px,1.55vmin,14px);letter-spacing:.25em;font-weight:800;color:#d5e6f0;margin:30px 0 0}
+.tempo-intro-brand p span {color:#EF3935;margin:0 7px}
+.tempo-intro-skip {position:absolute;z-index:5;top:clamp(20px,5vh,48px);right:clamp(20px,5vw,80px);border:1px solid rgba(180,218,237,.34);border-radius:999px;padding:13px 18px;color:#e5f2f8;background:rgba(22,65,89,.50);font-weight:750;font-size:12px;display:flex;align-items:center;gap:18px;backdrop-filter:blur(12px);transition:background .2s,border-color .2s}
+.tempo-intro-skip:hover{background:rgba(255,255,255,.13);border-color:#cbe3f2}
+.tempo-intro-skip span{font-size:17px}
+.tempo-intro-meta {position:absolute;bottom:39px;left:clamp(20px,5vw,80px);right:clamp(20px,5vw,80px);display:flex;justify-content:space-between;gap:20px;color:#79abc5;font-size:10px;font-weight:800;letter-spacing:.16em}
+.tempo-intro-progress {position:absolute;bottom:0;left:0;width:100%;height:4px;background:#1d4760}
+.tempo-intro-progress span {display:block;width:100%;height:100%;background:#EF3935;transform-origin:left;animation:tempoIntroProgress 2.27s linear forwards}
+@keyframes tempoIntroProgress {from {transform:scaleX(0)}to{transform:scaleX(1)}}
+/* The product photograph is intentionally removed from the home hero. */
+.hero-right{align-items:center}
+.hero-motion {position:relative;width:min(100%,515px);aspect-ratio:1;display:grid;place-items:center;isolation:isolate;filter:drop-shadow(0 26px 65px rgba(2,22,35,.15))}
+.hero-motion-grid {position:absolute;inset:0;border-radius:50%;background-image:linear-gradient(rgba(195,233,250,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(195,233,250,.1) 1px,transparent 1px);background-size:35px 35px;mask-image:radial-gradient(circle,black 25%,transparent 70%)}
+.hero-motion-halo{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,rgba(29,87,120,.08) 22%,rgba(41,117,155,.14) 57%,transparent 72%);border:1px solid rgba(169,217,239,.12)}
+.hero-motion-ring {position:absolute;border-radius:50%;aspect-ratio:1;box-shadow:inset 0 0 42px rgba(1,19,33,.52),0 0 55px rgba(58,146,184,.14);animation:heroMotionBreathe 7s ease-in-out infinite;}
+.hero-motion-ring--outer{width:74%;border:16px solid rgba(148,206,233,.32);box-shadow:inset 0 0 0 5px rgba(5,31,46,.5),0 0 0 1px rgba(170,223,245,.33),0 0 100px rgba(48,156,204,.13)}
+.hero-motion-ring--middle{width:53%;border:16px solid rgba(189,226,243,.55);box-shadow:inset 0 0 0 4px rgba(5,29,45,.65),0 0 0 1px rgba(204,241,255,.5);animation-delay:-2.3s}
+.hero-motion-ring--inner{width:31%;border:13px solid #EF3935;box-shadow:inset 0 0 0 5px rgba(7,35,56,.9),0 0 50px rgba(251,47,89,.20);animation-delay:-4s}
+.hero-motion-core {position:relative;z-index:2;display:flex;align-items:center;flex-direction:column;gap:5px;letter-spacing:.19em}
+.hero-motion-core span{font-size:clamp(13px,1.8vw,20px);font-weight:900;color:#fff}
+.hero-motion-core b{font-size:11px;color:#cce3ef}
+.hero-motion-line{position:absolute;width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(156,212,235,.65),transparent);opacity:.4}
+.hero-motion-line--one{transform:rotate(35deg)}.hero-motion-line--two{transform:rotate(-35deg)}
+.hero-motion-datum {position:absolute;font-size:9px;font-weight:800;letter-spacing:.18em;color:#9ac7d9;white-space:nowrap}
+.hero-motion-datum--top{top:7%;right:4%}.hero-motion-datum--bottom{bottom:9%;left:7%}
+.hero-motion-corner{position:absolute;width:38px;height:38px;border-color:rgba(159,210,233,.4);border-style:solid}
+.hero-motion-corner--tl{top:14%;left:10%;border-width:1px 0 0 1px}.hero-motion-corner--br{bottom:13%;right:10%;border-width:0 1px 1px 0}
+@keyframes heroMotionBreathe{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.035) rotate(8deg)}}
+@media (max-width:760px){
+  .hero-right{height:390px;min-height:0;margin-top:-7px}
+  .hero-motion{max-width:390px}
+  .hero-motion-ring--outer,.hero-motion-ring--middle{border-width:13px}
+  .hero-motion-ring--inner{border-width:10px}
+  .tempo-intro-meta{font-size:8px}
+}
+@media (max-width:480px){
+  .hero-right{height:320px}
+  .hero-motion{max-width:318px}
+  .tempo-intro-meta{bottom:25px;letter-spacing:.05em;font-size:8px}
+  .tempo-intro-brand p{letter-spacing:.12em}
+}
+@media (prefers-reduced-motion:reduce){
+  .tempo-intro-ring,.tempo-intro-progress span,.hero-motion-ring{animation:none!important}
+  .tempo-intro--brand .tempo-intro-brand{transition:none}
+  .tempo-intro--exit{transition:none}
+}

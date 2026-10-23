@@ -1,0 +1,278 @@
+/* Mobile-first layout refinements. Loaded after the original brand and page CSS. */
+.container,
+.header-inner,
+.hero-content,
+.hero-right,
+.contact-content > *,
+.footer-columns > * {
+  min-width: 0;
+}
+
+/* Header and navigation: the compact switcher remains visible from 320px. */
+.header-topline { display: none; }
+.site-header { height: 72px; }
+.site-header.scrolled { height: 68px; }
+.header-inner { gap: 8px; }
+.site-header .tempo-logo--official img { width: clamp(112px, 31vw, 150px); }
+.header-nav,
+.header-number,
+.header-cta { display: none; }
+.header-actions { margin-left: auto; gap: 0; }
+.header-actions > .language-switcher { display: inline-flex; }
+.header-actions .language-switcher { gap: 0; padding: 3px; }
+.header-actions .language-switcher button { min-width: 29px; min-height: 34px; padding: 7px 5px; }
+.menu-toggle { display: flex; flex: 0 0 44px; min-height: 44px; }
+.mobile-menu {
+  display: flex;
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  flex-direction: column;
+  max-height: calc(100dvh - 68px);
+  overflow-y: auto;
+  padding: 16px max(16px, calc((100vw - 1180px) / 2)) 24px;
+  background: #fff;
+  box-shadow: 0 15px 25px rgba(0,30,50,.12);
+}
+.mobile-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e4ebee;
+  font-size: 14px;
+  font-weight: 800;
+}
+.mobile-menu-phone {
+  justify-content: flex-start !important;
+  gap: 14px;
+  margin-top: 16px;
+  padding: 18px !important;
+  background: #f2f6f8;
+  color: var(--red);
+}
+.mobile-menu-phone svg:last-child { margin-left: auto; }
+.mobile-menu > .language-switcher { align-self: flex-start; margin: 3px 0 12px; }
+
+/* Hero: readable headings and full-width actions on phones. */
+.hero-layout { grid-template-columns: minmax(0, 1fr); }
+.hero-content { padding: 58px 0 24px; }
+.hero-content h1 {
+  max-width: 100%;
+  font-size: clamp(30px, 8.8vw, 58px);
+  line-height: 1.13;
+  letter-spacing: -.045em;
+  overflow-wrap: break-word;
+}
+.section-heading h2,
+.process-header h2,
+.about-text h2,
+.catalog-intro h2,
+.contact-heading h2,
+.banner-content h1,
+.home-contact-inner h2,
+.order-side h2 { overflow-wrap: break-word; }
+.banner-content > div,
+.home-contact-inner > div,
+.home-contact-actions { min-width: 0; }
+.banner-action,
+.home-contact-actions > .button { width: 100%; white-space: normal; text-align: center; }
+.hero-intro { max-width: 100%; }
+.hero-buttons { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.hero-buttons .button { width: 100%; min-height: 48px; white-space: normal; text-align: center; }
+.hero-right { height: 310px; min-height: 0; margin: 0; }
+.hero-motion { width: min(82vw, 318px); max-width: 100%; }
+.hero-motion-datum { font-size: 8px; letter-spacing: .08em; }
+.brand-rail .rail-inner { gap: 12px; }
+.brand-rail .rail-inner > a { min-width: 0; white-space: normal; }
+.about-layout,
+.catalog-feature { grid-template-columns: minmax(0, 1fr); }
+.about-layout > *,
+.catalog-feature > * { min-width: 0; }
+
+/* Product cards and filters. */
+.products-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.products-grid > .product-card,
+.product-card { border-radius: 24px; }
+.product-visual {
+  width: calc(100% - 20px);
+  height: auto;
+  aspect-ratio: 16 / 10;
+  margin: 10px 10px 0;
+  border-radius: 18px;
+}
+.product-visual img { width: 100%; height: 100%; object-fit: cover; }
+.product-body { min-height: 96px; padding: 18px; gap: 12px; }
+.product-body > div { min-width: 0; }
+.product-body h3 { overflow-wrap: break-word; }
+.category-filter { width: 100%; gap: 8px; }
+.category-filter button { min-height: 44px; padding: 10px 12px; white-space: normal; }
+.catalog-toolbar { align-items: stretch; }
+.catalog-result { align-self: flex-start; white-space: normal; }
+.product-promo { gap: 16px; }
+.promo-inner > div { min-width: 0; }
+.link-arrow { white-space: normal; }
+.preview-all .button { max-width: 100%; white-space: normal; text-align: center; }
+
+/* Cards are independent surfaces at every width. */
+.advantages-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  border: 0;
+}
+.advantage-card { min-width: 0; border-radius: 24px; }
+.advantage-card h3,
+.advantage-card p { overflow-wrap: break-word; }
+
+/* Contact, order and modals. */
+.contact-content,
+.order-only .contact-content { grid-template-columns: minmax(0, 1fr); }
+.contact-form-card,
+.contact-left,
+.map-frame { width: 100%; min-width: 0; }
+.contact-method strong,
+.contact-method em { overflow-wrap: anywhere; }
+.map-frame { height: clamp(220px, 60vw, 300px); }
+.map-frame iframe { display: block; width: 100%; height: 100%; }
+.form-two-cols { grid-template-columns: minmax(0, 1fr); }
+.contact-form-card input,
+.contact-form-card select,
+.contact-form-card textarea { min-height: 48px; font-size: 16px; }
+.form-button,
+.prepared-actions button,
+.prepared-actions a { min-height: 44px; white-space: normal; }
+.prepared-message { min-width: 0; }
+.prepared-message pre { overflow-wrap: anywhere; }
+.modal-backdrop { padding: 12px; }
+.product-modal {
+  width: min(100%, 530px);
+  min-height: 0;
+  max-height: calc(100dvh - 24px);
+  grid-template-columns: minmax(0, 1fr);
+  overflow-y: auto;
+}
+.modal-product-visual { height: clamp(190px, 52vw, 270px); min-height: 0; }
+.modal-product-info { min-width: 0; padding: 28px 22px; }
+.modal-product-info h2,
+.modal-product-info p { overflow-wrap: break-word; }
+.modal-product-info .button { max-width: 100%; min-height: 44px; white-space: normal; text-align: center; }
+.modal-close,
+.catalog-modal-toolbar button { width: 44px; height: 44px; }
+.catalog-modal { width: 100%; max-height: calc(100dvh - 24px); }
+.catalog-modal-toolbar { flex-wrap: wrap; }
+.catalog-modal-toolbar > span,
+.catalog-modal-toolbar > div { min-width: 0; }
+
+/* Footer. */
+.footer-intro { flex-direction: column; align-items: stretch; gap: 24px; }
+.footer-intro > div { min-width: 0; }
+.site-footer .footer-intro h2 {
+  font-family: 'Axiforma', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(32px, 3.8vw, 50px);
+  overflow-wrap: break-word;
+}
+.footer-talk { width: 100%; min-height: 48px; justify-content: center; white-space: normal; text-align: center; }
+.footer-columns { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.footer-brand-column,
+.footer-contact { grid-column: auto; }
+.footer-contact { display: flex; flex-direction: column; gap: 14px; }
+.footer-contact h3 { margin-bottom: 5px; }
+.footer-contact a,
+.footer-contact > div { min-width: 0; overflow-wrap: anywhere; }
+.footer-watermark {
+  max-width: 100%;
+  font-family: 'Axiforma', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(64px, 20vw, 248px);
+  letter-spacing: -.06em;
+}
+.footer-bottom { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+
+/* Intro stays centered and keeps its controls accessible on small screens. */
+.tempo-intro-target { width: min(76vmin, 640px); max-width: calc(100vw - 32px); }
+.tempo-intro-brand { width: min(calc(100% - 32px), 520px); }
+.tempo-intro-official-logo { width: min(72vw, 480px); margin-inline: auto; }
+.tempo-intro-skip { min-height: 44px; top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); }
+.tempo-intro-meta { left: 16px; right: 16px; gap: 10px; flex-wrap: wrap; }
+
+@media (min-width: 600px) {
+  .site-header { height: 76px; }
+  .site-header.scrolled { height: 70px; }
+  .header-inner { gap: 12px; }
+  .header-actions { gap: 10px; }
+  .header-actions .language-switcher { gap: 3px; padding: 4px; }
+  .header-actions .language-switcher button { min-width: 34px; min-height: 34px; padding: 7px 8px; }
+  .header-cta { display: inline-flex; }
+  .hero-content { padding-top: 72px; }
+  .hero-buttons { display: flex; flex-wrap: wrap; }
+  .hero-buttons .button { width: auto; }
+  .banner-action,
+  .home-contact-actions > .button { width: auto; }
+  .hero-right { height: 390px; }
+  .hero-motion { width: min(65vw, 390px); }
+  .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .advantages-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-two-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-talk { width: fit-content; }
+}
+
+@media (min-width: 768px) {
+  .header-number { display: flex; }
+  .hero-layout { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+  .hero-content { padding: 90px 0; }
+  .hero-content h1 { font-size: clamp(36px, 4.8vw, 58px); }
+  .hero-right { height: auto; min-height: 510px; }
+  .hero-motion { width: min(100%, 460px); }
+  .about-layout { grid-template-columns: minmax(0, 46fr) minmax(0, 54fr); }
+  .footer-intro { flex-direction: row; align-items: end; }
+  .product-modal {
+    width: min(100%, 820px);
+    grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+  }
+  .modal-product-visual { height: auto; min-height: 380px; }
+}
+
+@media (min-width: 1025px) {
+  .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .advantages-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .catalog-feature { grid-template-columns: minmax(0, 39fr) minmax(0, 61fr); }
+  .contact-content { grid-template-columns: minmax(0, 45fr) minmax(0, 55fr); }
+  .order-only .contact-content { grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); }
+  .hero-content h1 { font-size: clamp(48px, 4.95vw, 69px); }
+}
+
+@media (min-width: 1200px) {
+  .header-topline { display: block; }
+  .site-header { height: 86px; }
+  .site-header.scrolled { height: 72px; }
+  .site-header .tempo-logo--official img { width: clamp(150px, 13vw, 179px); }
+  .header-nav { display: flex; }
+  .header-number,
+  .menu-toggle,
+  .mobile-menu { display: none; }
+  .header-cta { display: inline-flex; }
+  .footer-columns { grid-template-columns: 1.36fr .75fr 1fr 1.05fr; }
+}
+
+@media (min-width: 1440px) {
+  .hero-content h1 { font-size: 69px; }
+}
+
+@media (max-width: 359px) {
+  .site-header .tempo-logo--official img { width: 112px; }
+  .header-actions .language-switcher button { min-width: 27px; padding-inline: 4px; }
+  .hero-content h1 { font-size: 30px; }
+}
+
+@media (max-height: 560px) {
+  .tempo-intro-target { width: min(66vmin, 500px); }
+  .tempo-intro-official-logo { width: min(58vw, 320px); }
+  .tempo-intro-meta { bottom: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu,
+  .slide-down-enter-active,
+  .slide-down-leave-active { transition: none; }
+  .tempo-intro-ring { will-change: auto; }
+}

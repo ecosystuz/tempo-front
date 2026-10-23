@@ -1,0 +1,18 @@
+/* 3-language switcher: works on desktop, mobile navigation and footer. */
+.language-switcher { display: inline-flex; align-items:center; flex: none; gap:3px; padding:4px; background:#edf4f7; border:1px solid #dce9ef; border-radius:999px; }
+.language-switcher button {appearance:none;border:0;background:transparent;border-radius:999px;min-height:31px;min-width:34px;padding:7px 8px;cursor:pointer;color:#42677d;font:800 10px/1 'Axiforma','Helvetica Neue',Arial,sans-serif;letter-spacing:.035em;transition:background .2s,color .2s,box-shadow .2s;}
+.language-switcher button.active { color:#fff;background:var(--navy);box-shadow:0 2px 8px rgba(13,55,83,.12); }
+.language-switcher button:hover:not(.active){background:#dcebf3;color:#103b54}
+.language-switcher button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px }
+.header-inner { gap: 15px; }
+.header-nav { gap:clamp(10px,1.3vw,20px) }
+.header-actions { gap:10px; }
+.header-cta {white-space:nowrap}
+.site-footer .language-switcher {margin-top:18px;background:#23536d;border-color:#37677d}
+.site-footer .language-switcher button {color:#d8e8f0}
+.site-footer .language-switcher button.active {background:#fff;color:var(--navy)}
+.site-footer .language-switcher button:hover:not(.active) {background:#37677d;color:#fff}
+@media(max-width:1200px){.header-nav {gap:12px}.header-nav a {font-size:10.5px}.header-inner {gap:11px}.header-cta {padding:11px 12px}}
+@media(max-width:1024px){.mobile-menu>.language-switcher{align-self:flex-start;margin:3px 0 11px}.header-actions>.language-switcher {display:inline-flex}}
+@media(max-width:760px){.site-footer .language-switcher{margin-top:16px}}
+@media(prefers-reduced-motion:reduce){.language-switcher button{transition:none}}
