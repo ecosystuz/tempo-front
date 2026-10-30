@@ -23,11 +23,11 @@ function closeIntro() {
   refresh()
 }
 watch([() => route.name, locale], () => {
-  const name = ['home', 'products', 'contact', 'order'].includes(route.name) ? route.name : 'home'
+  const name = ['home', 'products', 'about', 'contact', 'order'].includes(route.name) ? route.name : 'home'
   document.title = `${t(`titles.${name}`)} | TEMPO GROUP`
   document.documentElement.lang = locale.value
   const meta = document.querySelector('meta[name="description"]')
-  if (meta) meta.content = name === 'home' ? t('hero.desc') : t(`banners.${name === 'contact' ? 'contact' : name === 'order' ? 'order' : 'products'}.desc`)
+  if (meta) meta.content = name === 'home' ? t('hero.desc') : t(`banners.${name}.desc`)
   nextTick(refresh)
 }, { immediate: true })
 </script>
@@ -35,4 +35,4 @@ watch([() => route.name, locale], () => {
   <SiteHeader />
   <main id="main-content"><RouterView v-slot="{ Component }"><Transition name="page-fade" mode="out-in" @after-enter="refresh"><component :is="Component" :key="$route.path" /></Transition></RouterView></main>
   <SiteFooter /><FloatingCall /><IntroPipeTunnel v-if="showIntro" @complete="closeIntro" />
-</template>
+</template>  

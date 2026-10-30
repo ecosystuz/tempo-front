@@ -48,9 +48,9 @@ body.intro-open { overflow: hidden !important; }
 }
 .tempo-intro--brand .tempo-intro-brand,.tempo-intro--exit .tempo-intro-brand {opacity:1;transform:translateY(0) scale(1)}
 .tempo-intro-mark {width:68px;height:68px;border-radius:19px;background:linear-gradient(145deg,#184d6b,#0c3450);border:1px solid #5689a4;position:relative;display:grid;place-items:center;margin-bottom:22px;box-shadow:0 20px 65px rgba(0,0,0,.25)}
-.tempo-intro-mark-t {font-size:47px;line-height:1;color:#fff;font-weight:900;font-family:Arial,sans-serif;font-style:italic}
+.tempo-intro-mark-t {font-size:47px;line-height:1;color:#fff;font-weight:900;font-family:var(--site-font);font-style:italic}
 .tempo-intro-mark-dot {width:10px;height:10px;background:#EF3935;border-radius:3px;position:absolute;right:14px;top:14px}
-.tempo-intro-brand strong {font-family:'Axiforma','Helvetica Neue',Arial,sans-serif;font-size:clamp(44px,10vmin,100px);font-weight:900;line-height:1;letter-spacing:-.085em}
+.tempo-intro-brand strong {font-family:var(--site-font);font-size:clamp(44px,10vmin,100px);font-weight:900;line-height:1;letter-spacing:-.085em}
 .tempo-intro-brand strong span {display:block;font-size:clamp(13px,2vmin,20px);letter-spacing:.56em;margin:16px 0 0 .55em;font-weight:700;color:#b8d3e2}
 .tempo-intro-brand p {font-size:clamp(10px,1.55vmin,14px);letter-spacing:.25em;font-weight:800;color:#d5e6f0;margin:30px 0 0}
 .tempo-intro-brand p span {color:#EF3935;margin:0 7px}

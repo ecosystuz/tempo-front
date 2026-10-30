@@ -17,11 +17,9 @@ export const messages = {
       "viewAll": "Barcha mahsulotlarni ko‘rish",
       "ask": "Savol berish",
       "openNew": "Rasmni yangi oynada ochish",
-      "exampleAddress": "Namuna manzil",
       "officialSite": "Rasmiy veb-sayt",
       "phone": "Telefon raqam",
       "address": "Manzil",
-      "demoNotice": "Namuna manzil — haqiqiy manzil bilan almashtiring",
       "language": "Sayt tili",
       "skip": "O‘tkazib yuborish",
       "breadcrumb": "Sahifa yo‘li"
@@ -37,7 +35,8 @@ export const messages = {
       "home": "Bosh sahifa",
       "products": "Mahsulotlar",
       "contact": "Bog‘lanish",
-      "order": "Buyurtma berish"
+      "order": "Buyurtma berish",
+      "about": "Biz haqimizda"
     },
     "header": {
       "topline": "QUVUR VA FITINGLAR ISHLAB CHIQARISH YO‘NALISHI",
@@ -62,7 +61,15 @@ export const messages = {
       "visualAlt": "Quvur kesimlari asosidagi animatsiyali texnik tasvir",
       "flow": "OQIM",
       "precision": "ANIQLIK",
-      "diameter": "D / 110 MM"
+      "diameter": "D / 110 MM",
+      "carouselControls": "Slaydni tanlash",
+      "slideButton": "{number}-slaydga o‘tish",
+      "slides": [
+        {"line1": "Mustahkam quvurlar.", "line2a": "Ishonchli", "line2b": "kelajak.", "desc": "Suv ta’minoti va kanalizatsiya tizimlari uchun quvurlar, fitinglar va zamonaviy yechimlar. Har bir ulanishda — puxta yondashuv.", "feature1": "Quvurlar", "feature2": "Fitinglar", "feature3": "Gofra tizimlari", "datum": "D / 110 MM", "visualLabel": "Quvur kesimlarining harakatlanuvchi doiraviy texnik animatsiyasi"},
+        {"line1": "Har bir ulanish.", "line2a": "Puxta", "line2b": "yechim.", "desc": "Mufta, troynik va burilish elementlari bilan quvur tarmoqlarini loyihangizga mos ravishda ulang.", "feature1": "Muftalar", "feature2": "Troyniklar", "feature3": "Burilishlar", "datum": "T / 90°", "visualLabel": "Ulash elementlari va markaziy bo‘g‘inning animatsiyali texnik chizmasi"},
+        {"line1": "Aniq o‘lchamlar.", "line2a": "Ishonchli", "line2b": "natija.", "desc": "To‘g‘ri diametr va texnik xususiyatlarni tanlang. Kerakli mahsulot bo‘yicha batafsil ma’lumot oling.", "feature1": "O‘lchamlar", "feature2": "Texnik talablar", "feature3": "Mahsulot tanlovi", "datum": "± 0.1", "visualLabel": "O‘lchash va aniqlikni ifodalovchi aylanuvchi skaner animatsiyasi"},
+        {"line1": "Moslashuvchan tizim.", "line2a": "Keng", "line2b": "imkoniyat.", "desc": "Gofra quvurlar elektr va boshqa kommunikatsiya liniyalarini tartibli joylashtirish uchun qulay yechimdir.", "feature1": "Moslashuvchan", "feature2": "Rang tanlovi", "feature3": "Himoya liniyalari", "datum": "FLEX / 04", "visualLabel": "Gofra quvurning ketma-ket harakatlanuvchi halqalari animatsiyasi"}
+      ]
     },
     "products": {
       "eyebrowPreview": "01 / MASHHUR MAHSULOTLAR",
@@ -131,7 +138,8 @@ export const messages = {
       "feature1": "Quvurlar va fitinglar",
       "feature2": "Loyihaga mos assortiment",
       "feature3": "Mahsulot bo‘yicha maslahat",
-      "cta": "Hamkorlikni boshlash"
+      "cta": "Hamkorlikni boshlash",
+      "more": "Batafsil tanishish"
     },
     "process": {
       "eyebrow": "04 / HAMKORLIK BOSQICHLARI",
@@ -161,7 +169,7 @@ export const messages = {
       "view": "Katalogni ko‘rish",
       "ask": "Savol berish",
       "expandAria": "Tempo katalogini kattalashtirib ko‘rish",
-      "photoAlt": "Tempo mahsulotlar katalogidan sahifalar",
+      "photoAlt": "Quvurlarni ishlab chiqarish liniyasi va sanoat uskunalari",
       "open": "KATALOGNI OCHISH",
       "dialog": "Tempo mahsulotlar katalogi",
       "openNew": "Rasmni yangi oynada ochish",
@@ -189,13 +197,16 @@ export const messages = {
         "eyebrow": "BOG‘LANISH",
         "title": "Biz bilan",
         "accent": "bog‘laning.",
-        "desc": "Telefon raqamimiz, namunaviy manzil va xarita shu sahifada. Quyidagi forma orqali mahsulot bo‘yicha so‘rov matnini tayyorlashingiz mumkin."
+        "desc": "Telefon raqamimiz, Buxorodagi manzilimiz va xaritamiz shu sahifada. Quyidagi forma orqali mahsulot bo‘yicha so‘rov matnini tayyorlashingiz mumkin."
       },
       "order": {
         "eyebrow": "BUYURTMA",
         "title": "Buyurtmangizni",
         "accent": "qoldiring.",
         "desc": "Kerakli mahsulotni tanlab, kontakt ma’lumotlaringizni kiriting. Narx va mavjudlik menejer bilan aniqlashtiriladi."
+      },
+      "about": {
+        "desc": "Buxorodagi quvurlar, fitinglar va muhandislik tizimlari uchun mahsulotlar haqida ko‘proq bilib oling."
       }
     },
     "contact": {
@@ -211,7 +222,7 @@ export const messages = {
         "Kontakt ma’lumotlarini kiriting",
         "Menejer bilan mavjudlik va narxni kelishing"
       ],
-      "sampleMap": "Namunaviy manzil xaritasi",
+      "locationMap": "Buxorodagi manzil xaritasi",
       "formEyebrow": "BUYURTMA / SO‘ROV QOLDIRISH",
       "orderFormTitle": "Mahsulotga buyurtma.",
       "contactFormTitle": "Bizga xabar qoldiring.",
@@ -314,8 +325,57 @@ export const messages = {
       ]
     },
     "location": {
-      "address": "Toshkent shahri, Chilonzor tumani",
-      "query": "Chilonzor, Toshkent, O‘zbekiston"
+      "address": "Buxoro viloyati, Buxoro shahri, Alpomish 1",
+      "query": "39.748492,64.460131"
+    },
+    "aboutPage": {
+      "bannerEyebrow": "KOMPANIYA HAQIDA",
+      "bannerTitle": "Biz haqimizda.",
+      "bannerAccent": "TEMPO GROUP.",
+      "bannerDescription": "Buxorodagi quvurlar, fitinglar va muhandislik tizimlari uchun mahsulotlar haqida ko‘proq bilib oling.",
+      "storyEyebrow": "BIZ KIMMIZ",
+      "storyTitle": "Ishonchli tizimlar",
+      "storyAccent": "to‘g‘ri mahsulotdan boshlanadi.",
+      "storyLead": "TEMPO GROUP quvurlar va ulash elementlarini tanlash uchun qulay mahsulotlar katalogini taqdim etadi.",
+      "storyDescription": "Suv ta’minoti, kanalizatsiya va qurilish kommunikatsiyalari uchun mos yechim topishda assortiment, o‘lcham va texnik talablarni hisobga olish muhim. Biz quvurlar, fitinglar va egiluvchan tizimlar bilan tanishish, tanlovni aniqlashtirish hamda buyurtma bo‘yicha bog‘lanish imkoniyatini yaratamiz.",
+      "point1": "Quvurlar va fitinglar assortimenti",
+      "point2": "Loyiha ehtiyojiga qarab mahsulot tanlash",
+      "point3": "Mahsulot, o‘lcham va buyurtma bo‘yicha maslahat",
+      "viewProducts": "Mahsulotlarni ko‘rish",
+      "storyImageAlt": "Ko‘k va qizil chiziqli oq quvurlar",
+      "locationLabel": "BUXORO, O‘ZBEKISTON",
+      "rangeEyebrow": "MAHSULOT YO‘NALISHLARIMIZ",
+      "rangeTitle": "Bir katalogda",
+      "rangeAccent": "kerakli yechimlar.",
+      "rangeDescription": "Turli muhandislik tizimlariga mos mahsulot guruhlari. Mavjud diametr va turlarni menejer bilan aniqlashtiring.",
+      "pipeTitle": "Quvurlar",
+      "pipeDescription": "Suv ta’minoti va kanalizatsiya uchun PVC, PPR hamda boshqa quvur guruhlari.",
+      "fittingTitle": "Fitinglar",
+      "fittingDescription": "Ulash va tarmoqlash uchun burchaklar, muftalar, troyniklar va boshqa elementlar.",
+      "corrugatedTitle": "Gofra quvurlar",
+      "corrugatedDescription": "Moslashuvchan ulanish va texnik ehtiyojlar uchun rangli egiluvchan quvurlar.",
+      "certEyebrow": "HUJJATLAR",
+      "certTitle": "Sertifikatlar va",
+      "certAccent": "sifat hujjatlari.",
+      "certDescription": "Quyida siz taqdim etgan ikkita sertifikat nusxasi keltirilgan. Kattalashtirib ko‘rish uchun hujjat ustiga bosing.",
+      "isoTitle": "ISO 9001:2015 sifat menejmenti sertifikati",
+      "isoDescription": "Polipropilen va polivinilxlorid quvurlar hamda fitinglarni ishlab chiqarish bo‘yicha menejment tizimi hujjati.",
+      "isoStatus": "Hujjatda 14.10.2027 gacha amal qilishi ko‘rsatilgan",
+      "conformityTitle": "Mahsulot muvofiqligi sertifikati",
+      "conformityDescription": "“Leader Pipe” va “Tesbo” markali ayrim PVC quvurlar bo‘yicha muvofiqlik hujjati.",
+      "conformityStatus": "Hujjatdagi amal qilish muddati 08.08.2026 da tugagan",
+      "document": "Sertifikat",
+      "holder": "Hujjat egasi",
+      "holderName": "LEADER PIPE MChJ",
+      "expiry": "Hujjatdagi yakuniy sana",
+      "enlarge": "Sertifikatni kattalashtirish",
+      "previewAria": "{name} hujjatini kattalashtirish",
+      "openOriginal": "Asl rasmni yangi oynada ochish",
+      "certificateNote": "Diqqat: ikkala sertifikatda hujjat egasi “LEADER PIPE” MChJ sifatida ko‘rsatilgan. Ikkinchi sertifikatning ko‘rsatilgan muddati tugagan; u ma’lumot uchun saqlangan. Amaldagi holatni sertifikat bergan tashkilotdan tekshirish tavsiya etiladi.",
+      "contactEyebrow": "HAMKORLIK",
+      "contactTitle": "Loyihangiz uchun mos mahsulotni birga tanlaymiz.",
+      "contactDescription": "Mahsulotlar, buyurtmalar va mavjudlik yuzasidan savollaringiz bormi? Biz bilan bog‘laning.",
+      "contactButton": "Biz bilan bog‘lanish"
     }
   },
   "ru": {
@@ -335,11 +395,9 @@ export const messages = {
       "viewAll": "Смотреть всю продукцию",
       "ask": "Задать вопрос",
       "openNew": "Открыть изображение в новой вкладке",
-      "exampleAddress": "Пример адреса",
       "officialSite": "Официальный сайт",
       "phone": "Номер телефона",
       "address": "Адрес",
-      "demoNotice": "Демонстрационный адрес — замените на фактический",
       "language": "Язык сайта",
       "skip": "Пропустить",
       "breadcrumb": "Навигационная цепочка"
@@ -355,7 +413,8 @@ export const messages = {
       "home": "Главная",
       "products": "Продукция",
       "contact": "Контакты",
-      "order": "Заказать"
+      "order": "Заказать",
+      "about": "О нас"
     },
     "header": {
       "topline": "ПРОИЗВОДСТВО ТРУБ И ФИТИНГОВ",
@@ -380,7 +439,15 @@ export const messages = {
       "visualAlt": "Анимированная техническая иллюстрация сечений труб",
       "flow": "ПОТОК",
       "precision": "ТОЧНОСТЬ",
-      "diameter": "Д / 110 ММ"
+      "diameter": "Д / 110 ММ",
+      "carouselControls": "Выбрать слайд",
+      "slideButton": "Перейти к слайду {number}",
+      "slides": [
+        {"line1": "Прочные трубы.", "line2a": "Надёжное", "line2b": "будущее.", "desc": "Трубы, фитинги и современные решения для водоснабжения и канализации. Надёжность каждого соединения.", "feature1": "Трубы", "feature2": "Фитинги", "feature3": "Гофрированные трубы", "datum": "D / 110 ММ", "visualLabel": "Анимированная техническая схема сечений труб с концентрическими кольцами"},
+        {"line1": "Каждое соединение.", "line2a": "Точное", "line2b": "решение.", "desc": "Муфты, тройники и отводы помогут соединить элементы трубопровода для вашего проекта.", "feature1": "Муфты", "feature2": "Тройники", "feature3": "Отводы", "datum": "T / 90°", "visualLabel": "Анимированная схема соединительных элементов и центрального узла"},
+        {"line1": "Точные размеры.", "line2a": "Надёжный", "line2b": "результат.", "desc": "Подбирайте нужный диаметр и характеристики. Уточняйте детали продукции для своего проекта.", "feature1": "Размеры", "feature2": "Технические требования", "feature3": "Выбор продукции", "datum": "± 0.1", "visualLabel": "Анимированный сканер с окружностями для точного измерения"},
+        {"line1": "Гибкие системы.", "line2a": "Больше", "line2b": "возможностей.", "desc": "Гофрированные трубы — практичный вариант для организованной прокладки электрических и других коммуникаций.", "feature1": "Гибкость", "feature2": "Выбор цвета", "feature3": "Защитные линии", "datum": "FLEX / 04", "visualLabel": "Анимированная схема гибкой гофрированной трубы с повторяющимися кольцами"}
+      ]
     },
     "products": {
       "eyebrowPreview": "01 / ПОПУЛЯРНЫЕ ТОВАРЫ",
@@ -449,7 +516,8 @@ export const messages = {
       "feature1": "Трубы и фитинги",
       "feature2": "Ассортимент под ваш проект",
       "feature3": "Консультации по продукции",
-      "cta": "Начать сотрудничество"
+      "cta": "Начать сотрудничество",
+      "more": "Узнать больше"
     },
     "process": {
       "eyebrow": "04 / ЭТАПЫ СОТРУДНИЧЕСТВА",
@@ -479,7 +547,7 @@ export const messages = {
       "view": "Посмотреть каталог",
       "ask": "Задать вопрос",
       "expandAria": "Увеличить каталог Tempo",
-      "photoAlt": "Страницы каталога продукции Tempo",
+      "photoAlt": "Оборудование и производственная линия пластиковых труб",
       "open": "ОТКРЫТЬ КАТАЛОГ",
       "dialog": "Каталог продукции Tempo",
       "openNew": "Открыть изображение в новой вкладке",
@@ -507,13 +575,16 @@ export const messages = {
         "eyebrow": "КОНТАКТЫ",
         "title": "Свяжитесь",
         "accent": "с нами.",
-        "desc": "Наш телефон, демонстрационный адрес и карта. Ниже вы можете подготовить запрос на продукцию."
+        "desc": "Наш телефон, адрес в Бухаре и карта. Ниже вы можете подготовить запрос на продукцию."
       },
       "order": {
         "eyebrow": "ЗАКАЗ",
         "title": "Оставьте",
         "accent": "заявку.",
         "desc": "Выберите товар и укажите свои контакты. Цена и наличие уточняются у менеджера."
+      },
+      "about": {
+        "desc": "Узнайте больше о трубах, фитингах и продукции для инженерных систем в Бухаре."
       }
     },
     "contact": {
@@ -529,7 +600,7 @@ export const messages = {
         "Укажите контакты",
         "Уточните наличие и цену у менеджера"
       ],
-      "sampleMap": "Карта с демонстрационным адресом",
+      "locationMap": "Карта нашего адреса в Бухаре",
       "formEyebrow": "ЗАКАЗ / ЗАПРОС",
       "orderFormTitle": "Запрос на продукцию.",
       "contactFormTitle": "Напишите нам.",
@@ -632,8 +703,57 @@ export const messages = {
       ]
     },
     "location": {
-      "address": "г. Ташкент, Чиланзарский район",
-      "query": "Чиланзар, Ташкент, Узбекистан"
+      "address": "Бухарская область, город Бухара, Алпомиш 1",
+      "query": "39.748492,64.460131"
+    },
+    "aboutPage": {
+      "bannerEyebrow": "О КОМПАНИИ",
+      "bannerTitle": "О нас.",
+      "bannerAccent": "TEMPO GROUP.",
+      "bannerDescription": "Узнайте больше о трубах, фитингах и продукции для инженерных систем в Бухаре.",
+      "storyEyebrow": "КТО МЫ",
+      "storyTitle": "Надёжная система",
+      "storyAccent": "начинается с верного выбора.",
+      "storyLead": "TEMPO GROUP представляет каталог труб и соединительных элементов для удобного подбора продукции.",
+      "storyDescription": "Для водоснабжения, канализации и строительных коммуникаций важно учитывать ассортимент, размеры и технические задачи. Мы помогаем познакомиться с трубами, фитингами и гибкими системами, уточнить выбор и связаться по вопросам заказа.",
+      "point1": "Ассортимент труб и фитингов",
+      "point2": "Подбор продукции под задачи проекта",
+      "point3": "Консультации по размерам и заказам",
+      "viewProducts": "Смотреть продукцию",
+      "storyImageAlt": "Белые трубы с синими и красными полосами",
+      "locationLabel": "БУХАРА, УЗБЕКИСТАН",
+      "rangeEyebrow": "НАПРАВЛЕНИЯ ПРОДУКЦИИ",
+      "rangeTitle": "Нужные решения",
+      "rangeAccent": "в одном каталоге.",
+      "rangeDescription": "Группы продукции для разных инженерных систем. Диаметры и доступные варианты уточняйте у менеджера.",
+      "pipeTitle": "Трубы",
+      "pipeDescription": "PVC, PPR и другие виды труб для водоснабжения и канализации.",
+      "fittingTitle": "Фитинги",
+      "fittingDescription": "Отводы, муфты, тройники и соединительные элементы для трубопроводов.",
+      "corrugatedTitle": "Гофрированные трубы",
+      "corrugatedDescription": "Цветные гибкие трубы для инженерных и монтажных задач.",
+      "certEyebrow": "ДОКУМЕНТЫ",
+      "certTitle": "Сертификаты и",
+      "certAccent": "документы о качестве.",
+      "certDescription": "Ниже представлены две предоставленные вами копии сертификатов. Нажмите на изображение, чтобы рассмотреть документ.",
+      "isoTitle": "Сертификат менеджмента качества ISO 9001:2015",
+      "isoDescription": "Документ о системе менеджмента качества при производстве полипропиленовых и ПВХ труб и фитингов.",
+      "isoStatus": "В документе указан срок действия до 14.10.2027",
+      "conformityTitle": "Сертификат соответствия продукции",
+      "conformityDescription": "Документ о соответствии отдельных ПВХ-труб марок «Leader Pipe» и «Tesbo».",
+      "conformityStatus": "Указанный срок действия истёк 08.08.2026",
+      "document": "Сертификат",
+      "holder": "Владелец документа",
+      "holderName": "ООО «LEADER PIPE»",
+      "expiry": "Дата окончания по документу",
+      "enlarge": "Увеличить сертификат",
+      "previewAria": "Увеличить документ {name}",
+      "openOriginal": "Открыть оригинал изображения в новой вкладке",
+      "certificateNote": "Обратите внимание: владельцем обоих сертификатов указано ООО «LEADER PIPE». У второго сертификата истёк указанный срок действия — он размещён для ознакомления. Актуальный статус рекомендуется уточнять у органа сертификации.",
+      "contactEyebrow": "СОТРУДНИЧЕСТВО",
+      "contactTitle": "Поможем подобрать продукцию для вашего проекта.",
+      "contactDescription": "Есть вопросы о товарах, заказах или наличии? Свяжитесь с нами.",
+      "contactButton": "Связаться с нами"
     }
   },
   "en": {
@@ -653,11 +773,9 @@ export const messages = {
       "viewAll": "View all products",
       "ask": "Ask a question",
       "openNew": "Open image in new tab",
-      "exampleAddress": "Sample address",
       "officialSite": "Official website",
       "phone": "Phone number",
       "address": "Address",
-      "demoNotice": "Sample address — replace with actual address",
       "language": "Website language",
       "skip": "Skip intro",
       "breadcrumb": "Breadcrumb"
@@ -665,7 +783,7 @@ export const messages = {
     "nav": {
       "home": "Home",
       "products": "Products",
-      "about": "About",
+      "about": "About Us",
       "catalog": "Catalogue",
       "contact": "Contact"
     },
@@ -673,7 +791,8 @@ export const messages = {
       "home": "Home",
       "products": "Products",
       "contact": "Contact",
-      "order": "Request a quote"
+      "order": "Request a quote",
+      "about": "About Us"
     },
     "header": {
       "topline": "PLASTIC PIPE AND FITTING MANUFACTURING",
@@ -698,7 +817,15 @@ export const messages = {
       "visualAlt": "Animated technical illustration of pipe cross-sections",
       "flow": "FLOW",
       "precision": "PRECISION",
-      "diameter": "D / 110 MM"
+      "diameter": "D / 110 MM",
+      "carouselControls": "Select slide",
+      "slideButton": "Go to slide {number}",
+      "slides": [
+        {"line1": "Durable pipes.", "line2a": "A reliable", "line2b": "future.", "desc": "Pipes, fittings and modern solutions for water supply and drainage systems. Precision in every connection.", "feature1": "Pipes", "feature2": "Fittings", "feature3": "Corrugated pipes", "datum": "D / 110 MM", "visualLabel": "Animated technical pipe cross-sections with concentric rings"},
+        {"line1": "Every connection.", "line2a": "The right", "line2b": "fit.", "desc": "Explore couplers, tees and elbows to connect pipeline systems for your project.", "feature1": "Couplers", "feature2": "Tees", "feature3": "Elbows", "datum": "T / 90°", "visualLabel": "Animated technical diagram of pipe fittings and a central junction"},
+        {"line1": "Precise dimensions.", "line2a": "Reliable", "line2b": "results.", "desc": "Find suitable diameters and specifications, and get the product details your project needs.", "feature1": "Dimensions", "feature2": "Technical needs", "feature3": "Product choice", "datum": "± 0.1", "visualLabel": "Animated precision scanning circles and measuring axes"},
+        {"line1": "Flexible systems.", "line2a": "More", "line2b": "possibilities.", "desc": "Corrugated pipes provide practical routing options for electrical and other utility lines.", "feature1": "Flexibility", "feature2": "Color options", "feature3": "Protective lines", "datum": "FLEX / 04", "visualLabel": "Animated technical diagram of repeating corrugated pipe ridges"}
+      ]
     },
     "products": {
       "eyebrowPreview": "01 / FEATURED PRODUCTS",
@@ -767,7 +894,8 @@ export const messages = {
       "feature1": "Pipes and fittings",
       "feature2": "Solutions for your project",
       "feature3": "Product advice",
-      "cta": "Start a partnership"
+      "cta": "Start a partnership",
+      "more": "Learn more about us"
     },
     "process": {
       "eyebrow": "04 / HOW WE WORK",
@@ -797,7 +925,7 @@ export const messages = {
       "view": "View catalogue",
       "ask": "Ask a question",
       "expandAria": "Enlarge Tempo catalogue",
-      "photoAlt": "Pages from the Tempo product catalogue",
+      "photoAlt": "Plastic pipe manufacturing machinery and production line",
       "open": "OPEN CATALOGUE",
       "dialog": "Tempo product catalogue",
       "openNew": "Open image in new tab",
@@ -825,13 +953,16 @@ export const messages = {
         "eyebrow": "CONTACT",
         "title": "Get in",
         "accent": "touch.",
-        "desc": "Find our phone number, a sample address and map here. You can also prepare a product enquiry below."
+        "desc": "Find our phone number, Bukhara address and map here. You can also prepare a product enquiry below."
       },
       "order": {
         "eyebrow": "ORDER",
         "title": "Request",
         "accent": "a quote.",
         "desc": "Choose your product and enter your contact details. Availability and prices are confirmed by our manager."
+      },
+      "about": {
+        "desc": "Learn about our Bukhara-based pipe, fitting and engineering product catalogue."
       }
     },
     "contact": {
@@ -847,7 +978,7 @@ export const messages = {
         "Enter your contact details",
         "Confirm price and availability"
       ],
-      "sampleMap": "Map of sample location",
+      "locationMap": "Map of our Bukhara location",
       "formEyebrow": "ORDER / ENQUIRY",
       "orderFormTitle": "Product enquiry.",
       "contactFormTitle": "Send us a message.",
@@ -950,8 +1081,57 @@ export const messages = {
       ]
     },
     "location": {
-      "address": "Chilanzar district, Tashkent, Uzbekistan",
-      "query": "Chilanzar, Tashkent, Uzbekistan"
+      "address": "Alpomish 1, Bukhara, Bukhara Region, Uzbekistan",
+      "query": "39.748492,64.460131"
+    },
+    "aboutPage": {
+      "bannerEyebrow": "ABOUT US",
+      "bannerTitle": "About us.",
+      "bannerAccent": "TEMPO GROUP.",
+      "bannerDescription": "Learn about our Bukhara-based pipe, fitting and engineering product catalogue.",
+      "storyEyebrow": "WHO WE ARE",
+      "storyTitle": "Reliable systems",
+      "storyAccent": "start with the right products.",
+      "storyLead": "TEMPO GROUP brings pipes and connecting fittings together in an easy-to-explore product catalogue.",
+      "storyDescription": "From water supply to drainage and construction utilities, choosing the right specifications matters. We help customers explore pipe, fitting and flexible product ranges, clarify technical requirements and discuss their orders.",
+      "point1": "Pipes and fittings in one place",
+      "point2": "Product selection for project requirements",
+      "point3": "Guidance on dimensions, products and orders",
+      "viewProducts": "Explore products",
+      "storyImageAlt": "White pipes with blue and red stripes",
+      "locationLabel": "BUKHARA, UZBEKISTAN",
+      "rangeEyebrow": "WHAT WE OFFER",
+      "rangeTitle": "The right products,",
+      "rangeAccent": "one catalogue.",
+      "rangeDescription": "Browse the product groups for different engineering systems. Ask our manager about available sizes and specifications.",
+      "pipeTitle": "Pipes",
+      "pipeDescription": "PVC, PPR and other pipe ranges for water supply and drainage applications.",
+      "fittingTitle": "Fittings",
+      "fittingDescription": "Elbows, couplings, tees and connecting elements for pipe networks.",
+      "corrugatedTitle": "Corrugated pipes",
+      "corrugatedDescription": "Flexible coloured pipe ranges for different installation requirements.",
+      "certEyebrow": "DOCUMENTATION",
+      "certTitle": "Certificates and",
+      "certAccent": "quality documents.",
+      "certDescription": "Below are the two certificate images provided. Select a document to view a larger version.",
+      "isoTitle": "ISO 9001:2015 Quality Management Certificate",
+      "isoDescription": "A quality management system document covering the production of polypropylene and PVC pipes and fittings.",
+      "isoStatus": "The document states validity until 14 October 2027",
+      "conformityTitle": "Product Conformity Certificate",
+      "conformityDescription": "A conformity document for specified Leader Pipe and Tesbo PVC pipe products.",
+      "conformityStatus": "The stated validity expired on 8 August 2026",
+      "document": "Certificate",
+      "holder": "Certificate holder",
+      "holderName": "LEADER PIPE LLC",
+      "expiry": "Expiry date shown",
+      "enlarge": "View certificate",
+      "previewAria": "Enlarge {name}",
+      "openOriginal": "Open original image in a new tab",
+      "certificateNote": "Please note: both documents name “LEADER PIPE” LLC as the certificate holder. The second certificate has passed its stated expiry date and is shown for reference only. Confirm current status with the issuing body.",
+      "contactEyebrow": "LET’S WORK TOGETHER",
+      "contactTitle": "Find the right products for your next project.",
+      "contactDescription": "Questions about product options, orders or availability? Get in touch with our team.",
+      "contactButton": "Contact us"
     }
   }
 }

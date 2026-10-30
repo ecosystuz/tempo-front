@@ -13,7 +13,7 @@ Mening mavjud TEMPO GROUP Vue 3 + Vite loyihamga shu papkadagi uch tilli patchni
 5. Mahsulot tanlash `product.id` orqali bo‘lsin: `/buyurtma?product=coupler` kabi URL bilan boshqa tilga o‘tganda ham tanlangan mahsulot saqlansin.
 6. `src/styles-i18n.css` dizaynini moslang. Asl logotipni cho‘zma/o‘zgartirma va brandbook ranglari (#154968, #EF3935, #54A2D9) hamda radius/animatsiyalarni saqla.
 7. Mavjud sahifalar (`/`, `/mahsulotlar`, `/boglanish`, `/buyurtma`) va barcha funksiyalar ishlasin; SEO title/description tilga mos yangilansin.
-8. Mahsulot buyurtma formasi backendga ulanmagan bo‘lsa, demo holatida saqlansin: fake “yuborildi” xabari bo‘lmasin. Kontakt ma’lumotlarini o‘zgartirma. Xarita/manzil hozircha sample ekanini ko‘rsat.
+8. Mahsulot buyurtma formasi backendga ulanmagan bo‘lsa, demo holatida saqlansin: fake “yuborildi” xabari bo‘lmasin. Telefon va sayt kontaktlarini o‘zgartirma. Manzil Buxoro viloyati, Buxoro shahri, Alpomish 1, Google Maps https://maps.app.goo.gl/cENGJWrjhFXDazkv7 asosida ko‘rsat.
 9. Agar mavjud lokal komponentlar patchdagi komponentlardan farq qilsa, o‘zgarishlarni **merge** qil, to‘liq ustidan yozib mavjud ishlanmalarni yo‘qotma.
 10. Ish oxirida `npm install`, `npm run build` qilib tekshir. Brauzerda UZ/RU/EN, mobile menu, modal va buyurtmani test qil. Qaysi fayllar o‘zgarganini ko‘rsat.
 

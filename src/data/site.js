@@ -1,7 +1,7 @@
 /**
  * O'ZGARTIRISH UCHUN ASOSIY FAYL.
  * Brand/telefon: foydalanuvchi taqdim etgan Tempo katalogidan.
- * Manzil va xarita: NAMUNA, kompaniyaning real manzili EMAS.
+ * Manzil va Google Maps: loyiha egasi taqdim etgan maʼlumotlar.
  * Telegram/Instagram/email: katalogda tasdiqlanmaganligi sababli kiritilmadi.
  */
 export const site = {
@@ -12,10 +12,11 @@ export const site = {
   phoneHref: '+998914444422',
   website: 'https://tempogroup.uz',
   websiteText: 'tempogroup.uz',
-  // NAMUNA manzil. Ishga tushirishdan oldin haqiqiy manzilga almashtiring.
-  address: 'Toshkent shahri, Chilonzor tumani',
-  locationNote: 'Namuna manzil — haqiqiy manzil bilan almashtiring',
-  mapsQuery: 'Chilonzor, Toshkent, O‘zbekiston',
+  // Manzil va Google Maps havolasi loyiha egasi tomonidan berilgan.
+  address: 'Buxoro viloyati, Buxoro shahri, Alpomish 1',
+  mapsQuery: '39.748492,64.460131',
+  mapsCoordinates: '39.748492,64.460131',
+  mapsUrl: 'https://maps.app.goo.gl/cENGJWrjhFXDazkv7',
   // Ixtiyoriy: backend so'rov qabul qiluvchi endpoint yoqilsa, URL kiriting.
   formEndpoint: '',
 }
@@ -23,7 +24,7 @@ export const site = {
 export const navLinks = [
   { key: 'home', name: 'Bosh sahifa', href: '/' },
   { key: 'products', name: 'Mahsulotlar', href: '/mahsulotlar' },
-  { key: 'about', name: 'Biz haqimizda', href: '/#about' },
+  { key: 'about', name: 'Biz haqimizda', href: '/about-us' },
   { key: 'catalog', name: 'Katalog', href: '/#catalog' },
   { key: 'contact', name: 'Bog‘lanish', href: '/boglanish' },
 ]

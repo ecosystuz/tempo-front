@@ -23,7 +23,7 @@ Brandbook Axiforma fontini ko‘rsatadi, lekin shriftdan foydalanish uchun mos l
 
 ## Real bo‘lmagan ma’lumotlar
 - Telefon: katalogdagi `+998 (91) 444 44 22`.
-- Manzil: NAMUNA `Toshkent shahri, Chilonzor tumani` — ishga tushirishdan oldin almashtiring.
+- Manzil: `Buxoro viloyati, Buxoro shahri, Alpomish 1`; Google Maps: https://maps.app.goo.gl/cENGJWrjhFXDazkv7 (foydalanuvchi taqdim etgan).
 - So‘rov formasi: API ulanmaguncha real buyurtma jo‘natmaydi.
 - Mahsulot WebP vizuallari oldingi demo versiyadan; haqiqiy fotografiyaga tasdiqlanmagan.
 

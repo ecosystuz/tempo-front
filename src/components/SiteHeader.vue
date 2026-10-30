@@ -37,7 +37,7 @@ onUnmounted(() => {
     <div class="container topline-inner">
       <div class="topline-left"><span class="live-indicator"></span> {{ t('header.topline') }}</div>
       <div class="topline-right">
-        <RouterLink to="/boglanish#location"><MapPin :size="13" /> {{ translatedAddress }} ({{ t('common.exampleAddress') }})</RouterLink>
+        <a :href="site.mapsUrl" target="_blank" rel="noopener noreferrer"><MapPin :size="13" /> {{ translatedAddress }}</a>
         <span class="topline-divider"></span>
         <a :href="`tel:${site.phoneHref}`"><Phone :size="13" /> {{ site.phoneText }}</a>
       </div>

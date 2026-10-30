@@ -27,9 +27,10 @@ onUnmounted(() => { window.removeEventListener('keydown', keyHandler); document.
   <section :id="preview ? 'featured-products' : 'products'" class="products-section section-space"><div class="container">
     <SectionHeading :eyebrow="t(preview ? 'products.eyebrowPreview' : 'products.eyebrowFull')" :title="t(preview ? 'products.previewTitle' : 'products.fullTitle')" :highlight="t(preview ? 'products.previewAccent' : 'products.fullAccent')" :description="t('products.desc')" />
     <div v-if="!preview" class="catalog-toolbar" data-reveal><div class="category-filter" role="group" :aria-label="t('products.filterLabel')">
-      <button v-for="category in localizedCategories" :key="category.key" type="button" :class="{active: selectedCategory === category.key}" @click="selectCategory(category.key)">{{ category.name }} <span v-if="category.key === 'all'">{{ localizedProducts.length }}</span></button>
+      <button v-for="category in localizedCategories" :key="category.key" type="button" :class="{active: selectedCategory === category.key}" :aria-pressed="selectedCategory === category.key" @click="selectCategory(category.key)">{{ category.name }} <span v-if="category.key === 'all'">{{ localizedProducts.length }}</span></button>
     </div><span class="catalog-result">{{ filtered.length.toString().padStart(2, '0') }} {{ t('products.result') }}</span></div>
-    <TransitionGroup name="product" tag="div" class="products-grid"><ProductCard v-for="(item, index) in filtered" :key="item.id" :product="item" :index="index" @details="show" /></TransitionGroup>
+    <!-- A normal keyed grid prevents disappearing cards from overlapping the next filter result. -->
+    <div class="products-grid"><ProductCard v-for="(item, index) in filtered" :key="item.id" :product="item" :index="index" @details="show" /></div>
     <div v-if="!preview" class="product-promo" data-reveal><div class="promo-inner"><div class="promo-icon">✳</div><div><b>{{ t('products.noProduct') }}</b><p>{{ t('products.manager') }}</p></div></div><RouterLink to="/buyurtma" class="link-arrow">{{ t('products.leaveRequest') }} <ArrowUpRight :size="20"/></RouterLink></div>
     <div v-if="preview" class="preview-all"><RouterLink to="/mahsulotlar" class="button button-dark button-lg">{{ t('products.all') }} <ArrowUpRight :size="19"/></RouterLink><span>{{ t('products.previewMeta') }}</span></div>
   </div></section>

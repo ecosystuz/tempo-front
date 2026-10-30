@@ -167,7 +167,7 @@
 .footer-intro { flex-direction: column; align-items: stretch; gap: 24px; }
 .footer-intro > div { min-width: 0; }
 .site-footer .footer-intro h2 {
-  font-family: 'Axiforma', 'Helvetica Neue', Arial, sans-serif;
+  font-family:var(--site-font);
   font-size: clamp(32px, 3.8vw, 50px);
   overflow-wrap: break-word;
 }
@@ -181,7 +181,7 @@
 .footer-contact > div { min-width: 0; overflow-wrap: anywhere; }
 .footer-watermark {
   max-width: 100%;
-  font-family: 'Axiforma', 'Helvetica Neue', Arial, sans-serif;
+  font-family:var(--site-font);
   font-size: clamp(64px, 20vw, 248px);
   letter-spacing: -.06em;
 }
@@ -276,3 +276,8 @@
   .slide-down-leave-active { transition: none; }
   .tempo-intro-ring { will-change: auto; }
 }
+
+/* Catalog: filter changes must never overlay neighboring cards. */
+.products-grid { grid-auto-flow: row; align-items: stretch; }
+.products-grid > .product-card { position: relative; width: 100%; min-width: 0; animation: none; }
+.products-grid > .product-card .product-card-hit { width: 100%; }

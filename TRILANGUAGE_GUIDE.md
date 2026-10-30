@@ -27,9 +27,9 @@ npm run build
 - `src/i18n/index.js` — reactive `locale`, `setLocale`, `t`, localized products/categories/advantages.
 - `src/components/LanguageSwitcher.vue` — language control.
 - `src/styles-i18n.css` — styling (responsive header/menu/footer).
-- `src/data/site.js` — phone, website, product IDs and images, default site data, sample address.
+- `src/data/site.js` — phone, website, product IDs and images, default site data, Bukhara address and Google Maps link.
 
-**Important:** Address is a *sample*, not a verified factory location. Update `location.address` and `location.query` in **all three** language objects in `src/i18n/messages.js` when the real address is known, and update `site.js` for the raw Uzbek default. Phone is from the supplied Tempo product catalogue.
+**Location:** The provided address is Bukhara Region, Bukhara city, Alpomish 1. The given Google Maps short link and coordinates are in `src/data/site.js`. Translate `location.address` in all three language objects in `src/i18n/messages.js` when changing the address. Phone is from the supplied Tempo product catalogue.
 
 Order form is in demo mode (`formEndpoint: ''` in `src/data/site.js`). It prepares copyable text rather than claiming that an order was sent. If you enable a backend, API payload includes the localized `product` name and stable `productId`.
 
@@ -41,7 +41,7 @@ The Tempo 2024 brandbook names Axiforma / Helvetica Neue typography. Axiforma fo
 2. Open product detail, switch language via header (desktop) and confirm text changes (modal is a teleport).
 3. Choose a product and click enquiry. On the order page product is preselected, even after changing languages.
 4. Validate form with missing fields in each language. Copy prepared enquiry text and ensure correct translated labels.
-5. Use contact link, verify the map and sample address labels in each language.
+5. Use contact link, verify the Bukhara address and map in each language.
 6. Test mobile hamburger menu, the language control, page navigation.
 7. Reload and check language is remembered. Start a new browser session and confirm the Pipe Tunnel intro still works.
 8. Run `npm run build` on your own machine and fix issues in your actual combined repository.

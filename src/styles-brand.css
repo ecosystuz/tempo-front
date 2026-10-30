@@ -18,7 +18,7 @@
   --radius-lg: 24px;
   --radius-xl: 32px;
   --radius-pill: 999px;
-  font-family: 'Axiforma', 'Helvetica Neue', system-ui, sans-serif;
+  font-family:var(--site-font);
 }
 body { background: #fff; color: var(--ink); }
 /* Keep the original logo in its approved proportion, with actual breathing room. */

@@ -4,7 +4,7 @@ import { ArrowUpRight, Expand, X, BookOpen } from 'lucide-vue-next'
 import { useI18n } from '../i18n'
 const { t, locale } = useI18n()
 const opened = ref(false)
-const previewImage = computed(() => `/images/catalog/${locale.value}-wide.svg`)
+const previewImage = '/images/tempo-factory-production.webp'
 const fullImage = computed(() => `/images/catalog/${locale.value}-full.svg`)
 function show() { opened.value = true; document.body.classList.add('modal-open') }
 function close() { opened.value = false; document.body.classList.remove('modal-open') }

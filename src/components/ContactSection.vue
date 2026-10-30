@@ -4,7 +4,7 @@ import { Phone, MapPin, Globe2, ArrowUpRight, Copy, Check, ExternalLink } from '
 import { site } from '../data/site'
 import { useI18n } from '../i18n'
 import { messages } from '../i18n/messages'
-const { t, locale, localizedProducts, translatedAddress, translatedMapsQuery } = useI18n()
+const { t, locale, localizedProducts, translatedAddress } = useI18n()
 const props = defineProps({ preselectedProduct: { type: String, default: '' }, orderOnly: { type: Boolean, default: false } })
 // Store stable product IDs so changing the language does not reset the form.
 const form = ref({ name: '', phone: '', product: '', quantity: '', note: '' })
@@ -13,8 +13,9 @@ const error = computed(() => errorKey.value ? t(errorKey.value) : '')
 const prepared = ref(false)
 const copied = ref(false)
 const sending = ref(false)
-const mapEmbed = computed(() => `https://www.google.com/maps?q=${encodeURIComponent(translatedMapsQuery.value)}&output=embed`)
-const mapLink = computed(() => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(translatedMapsQuery.value)}`)
+// Pin the embedded map to the exact coordinates in the supplied Google Maps link.
+const mapEmbed = `https://www.google.com/maps?q=${encodeURIComponent(site.mapsCoordinates)}&z=17&output=embed`
+const mapLink = site.mapsUrl
 const productName = computed(() => localizedProducts.value.find(p => p.id === form.value.product)?.name || (form.value.product === 'other' ? t('contact.other') : ''))
 watch(() => props.preselectedProduct, val => { if (val && localizedProducts.value.some(p => p.id === val)) { form.value.product = val; prepared.value = false } }, { immediate: true })
 const message = computed(() => [
@@ -68,8 +69,8 @@ async function copy() {
       <div v-else class="contact-left" data-reveal>
         <a class="contact-method" :href="`tel:${site.phoneHref}`"><span class="contact-method-icon"><Phone :size="23" /></span><span><small>{{ t('common.phone').toUpperCase() }}</small><strong>{{ site.phoneText }}</strong></span><ArrowUpRight class="contact-method-arrow" :size="20"/></a>
         <a class="contact-method" :href="site.website" target="_blank" rel="noopener noreferrer"><span class="contact-method-icon"><Globe2 :size="23" /></span><span><small>{{ t('common.officialSite').toUpperCase() }}</small><strong>{{ site.websiteText }}</strong></span><ArrowUpRight class="contact-method-arrow" :size="20"/></a>
-        <div id="location" class="contact-method address-method"><span class="contact-method-icon"><MapPin :size="23" /></span><span><small>{{ t('common.address').toUpperCase() }} ({{ t('common.exampleAddress') }})</small><strong>{{ translatedAddress }}</strong><em>{{ t('common.demoNotice') }}</em></span></div>
-        <div class="map-frame"><iframe :src="mapEmbed" :title="t('contact.sampleMap')" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a :href="mapLink" target="_blank" rel="noopener noreferrer">{{ t('common.seeMap') }} <ExternalLink :size="16"/></a></div>
+        <div id="location" class="contact-method address-method"><span class="contact-method-icon"><MapPin :size="23" /></span><span><small>{{ t('common.address').toUpperCase() }}</small><strong>{{ translatedAddress }}</strong></span></div>
+        <div class="map-frame"><iframe :src="mapEmbed" :title="t('contact.locationMap')" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a :href="mapLink" target="_blank" rel="noopener noreferrer">{{ t('common.seeMap') }} <ExternalLink :size="16"/></a></div>
       </div>
       <div id="order" class="contact-form-card" data-reveal><div class="form-header"><span>{{ t('contact.formEyebrow') }}</span><h3>{{ t(orderOnly ? 'contact.orderFormTitle' : 'contact.contactFormTitle') }}</h3><p>{{ t('contact.formDesc') }}</p></div><form @submit.prevent="submit" novalidate>
         <div class="form-two-cols"><label>{{ t('contact.name') }} <b>*</b><input v-model.trim="form.name" name="name" :placeholder="t('contact.name')" autocomplete="name" required /></label><label>{{ t('contact.phone') }} <b>*</b><input v-model.trim="form.phone" name="phone" placeholder="+998 90 123 45 67" inputmode="tel" autocomplete="tel" required /></label></div>
