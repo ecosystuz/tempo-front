@@ -71,7 +71,7 @@ export const products = [
     id: 'ppr-valve', category: 'fittings', tag: 'Fiting',
     name: 'PPR kran', subheading: 'Sharli yopuvchi kran',
     description: 'PPR quvur tizimlari uchun mo‘ljallangan oq sharli kran. Suv oqimini boshqarish va tarmoqni yopish uchun qo‘llanadi.',
-    image: 'public/images/image.png',
+    image: '/images/image.png',
   },
   {
     id: 'pvc-pipe', category: 'pipes', tag: 'Quvur',
