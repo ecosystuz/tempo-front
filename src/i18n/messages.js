@@ -85,7 +85,7 @@ export const messages = {
       "manager": "O‘lcham, rang va boshqa xususiyatlarni menejerimizdan aniqlashtiring.",
       "leaveRequest": "So‘rov qoldirish",
       "all": "Barcha mahsulotlarni ko‘rish",
-      "previewMeta": "9 ta mahsulot · 3 ta kategoriya",
+      "previewMeta": "10 ta mahsulot · 3 ta kategoriya",
       "catalog": "TEMPO KATALOGI",
       "availability": "Mahsulot o‘lchami, mavjudligi va narxi menejer bilan aniqlashtiriladi.",
       "enquire": "Shu mahsulotni so‘rash",
@@ -303,20 +303,25 @@ export const messages = {
         "O‘tish elementi",
         "Turli diametrli qismlarni birlashtirishda qo‘llanadigan o‘tish elementi."
       ],
+      "ppr-valve": [
+        "PPR kran",
+        "Sharli yopuvchi kran",
+        "PPR quvur tizimlari uchun mo‘ljallangan oq sharli kran. Suv oqimini boshqarish va tarmoqni yopish uchun qo‘llanadi."
+      ],
       "pvc-pipe": [
         "PVC quvurlar",
-        "Oq quvurlar seriyasi",
-        "Muhandislik kommunikatsiyalari uchun oq rangdagi quvur assortimenti."
+        "Silliq oq quvurlar",
+        "Kanalizatsiya va texnik kommunikatsiyalar uchun silliq yuzali oq PVC quvurlar assortimenti."
       ],
       "ppr-pipe": [
         "PPR quvurlar",
-        "Rangli liniya seriyasi",
-        "Suv tizimlari uchun katalogda taqdim etilgan rangli quvur mahsulotlari."
+        "Issiq va sovuq suv quvurlari",
+        "Suv ta’minoti tizimlari uchun oq rangli PPR quvurlar. O‘lchamlarni menejerdan aniqlang."
       ],
       "multilayer-pipe": [
         "Ko‘p qatlamli quvurlar",
-        "Oq-ko‘k seriya",
-        "Katalogda ko‘rsatilgan rangli qatlamli quvurlar. O‘lcham va xususiyatlarni menejerdan aniqlang."
+        "Rangli qatlamli seriya",
+        "Oq va to‘q sariq qatlamli quvurlar issiqlik hamda ichki kommunikatsiya tizimlari uchun mos yechimdir."
       ],
       "flex-pipe": [
         "Gofra quvurlar",
@@ -463,7 +468,7 @@ export const messages = {
       "manager": "Уточните размеры, цвета и другие характеристики у нашего менеджера.",
       "leaveRequest": "Оставить заявку",
       "all": "Смотреть всю продукцию",
-      "previewMeta": "9 товаров · 3 категории",
+      "previewMeta": "10 товаров · 3 категории",
       "catalog": "КАТАЛОГ TEMPO",
       "availability": "Размеры, наличие и цены уточняются у менеджера.",
       "enquire": "Запросить этот товар",
@@ -681,20 +686,25 @@ export const messages = {
         "Переходной элемент",
         "Переходник для соединения деталей разных диаметров."
       ],
+      "ppr-valve": [
+        "Кран PPR",
+        "Шаровый запорный кран",
+        "Белый шаровый кран для труб PPR. Используется для управления потоком воды и перекрытия линии."
+      ],
       "pvc-pipe": [
         "Трубы PVC",
-        "Серия белых труб",
-        "Ассортимент белых труб для инженерных коммуникаций."
+        "Гладкие белые трубы",
+        "Ассортимент гладких белых труб PVC для канализации и технических коммуникаций."
       ],
       "ppr-pipe": [
         "Трубы PPR",
-        "Цветная серия",
-        "Цветные трубы для систем водоснабжения, представленные в каталоге."
+        "Горячее и холодное водоснабжение",
+        "Белые PPR трубы для систем водоснабжения. Доступные размеры уточняйте у менеджера."
       ],
       "multilayer-pipe": [
         "Многослойные трубы",
-        "Бело-голубая серия",
-        "Многослойные трубы из каталога. Размеры и характеристики уточняйте у менеджера."
+        "Цветная многослойная серия",
+        "Белые и оранжевые многослойные трубы для отопления и внутренних инженерных систем."
       ],
       "flex-pipe": [
         "Гофрированные трубы",
@@ -841,7 +851,7 @@ export const messages = {
       "manager": "Ask our team about sizes, colors and other specifications.",
       "leaveRequest": "Send an enquiry",
       "all": "View all products",
-      "previewMeta": "9 products · 3 categories",
+      "previewMeta": "10 products · 3 categories",
       "catalog": "TEMPO CATALOGUE",
       "availability": "Dimensions, availability and pricing are confirmed by our manager.",
       "enquire": "Enquire about this product",
@@ -1059,20 +1069,25 @@ export const messages = {
         "Transition fitting",
         "A fitting used to connect pipes with different diameters."
       ],
+      "ppr-valve": [
+        "PPR valve",
+        "Ball shut-off valve",
+        "A white ball valve for PPR pipe systems, used to control water flow and isolate the line."
+      ],
       "pvc-pipe": [
         "PVC pipes",
-        "White pipe range",
-        "White pipes for engineering and utility systems."
+        "Smooth white pipe series",
+        "A range of smooth white PVC pipes for drainage and technical utility systems."
       ],
       "ppr-pipe": [
         "PPR pipes",
-        "Coloured pipe range",
-        "Coloured pipes for water systems shown in the catalogue."
+        "Hot and cold water pipes",
+        "White PPR pipes for water supply systems. Ask our manager for available sizes."
       ],
       "multilayer-pipe": [
         "Multilayer pipes",
-        "White-blue series",
-        "Multilayer pipes presented in the catalogue. Contact our manager for specifications."
+        "Colored multilayer series",
+        "White and orange multilayer pipes suitable for heating and indoor utility systems."
       ],
       "flex-pipe": [
         "Corrugated pipes",
