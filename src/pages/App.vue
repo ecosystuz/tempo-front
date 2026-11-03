@@ -11,7 +11,7 @@ const { locale, t } = useI18n()
 const route = useRoute()
 const INTRO_KEY = 'tempo-pipe-tunnel-seen-v1'
 function shouldShowIntro() {
-  if (typeof window === 'undefined') return false
+  if (typeof  window === 'undefined') return false
   try { return sessionStorage.getItem(INTRO_KEY) !== '1' }
   catch { return true }
 }
