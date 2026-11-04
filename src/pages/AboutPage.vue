@@ -8,7 +8,7 @@ import { site } from '../data/site'
 const { t, translatedAddress } = useI18n()
 const certificates = [
   { id: 'iso', image: '/images/certificates/iso-9001-leader-pipe.png', titleKey: 'aboutPage.isoTitle', descriptionKey: 'aboutPage.isoDescription', number: 'UTS-149-2024', date: '14.10.2027', statusKey: 'aboutPage.isoStatus' },
-  { id: 'conformity', image: '/images/certificates/conformity-leader-pipe.png', titleKey: 'aboutPage.conformityTitle', descriptionKey: 'aboutPage.conformityDescription', number: '969444', date: '08.08.2026', statusKey: 'aboutPage.conformityStatus' },
+  { id: 'conformity', image: '/images/certificates/conformity-leader-pipe.png', titleKey: 'aboutPage.conformityTitle', descriptionKey: 'aboutPage.conformityDescription', number: 'UZ.SMT-01-0103-204023', date: '05.05.2029', pdf: '/documents/tempo-conformity-2029.pdf', statusKey: 'aboutPage.conformityStatus' },
 ]
 const currentCertificate = ref(null)
 const closeRef = ref(null)
@@ -97,7 +97,7 @@ onUnmounted(() => {
               <p>{{ t(certificate.descriptionKey) }}</p>
               <dl class="certificate-details"><div><dt>{{ t('aboutPage.holder') }}</dt><dd>{{ t('aboutPage.holderName') }}</dd></div>
                 <div><dt>{{ t('aboutPage.expiry') }}</dt><dd>{{ certificate.date }}</dd></div></dl>
-              <span class="certificate-status" :class="{ 'is-expired': certificate.id === 'conformity' }">{{ t(certificate.statusKey) }}</span>
+              <span class="certificate-status" :class="{ 'is-expired': false }">{{ t(certificate.statusKey) }}</span>
               <button class="certificate-open" type="button" @click="openCertificate(certificate)">{{ t('aboutPage.enlarge') }} <ArrowUpRight :size="18" /></button>
             </div>
           </article>
@@ -115,7 +115,7 @@ onUnmounted(() => {
       <div v-if="currentCertificate" class="certificate-lightbox" role="presentation" @click.self="closeCertificate">
         <section class="certificate-lightbox-panel" role="dialog" aria-modal="true" :aria-label="t(currentCertificate.titleKey)">
           <div class="certificate-lightbox-top"><span><FileCheck2 :size="19" />{{ t(currentCertificate.titleKey) }}</span>
-            <div><a :href="currentCertificate.image" target="_blank" rel="noopener noreferrer" :aria-label="t('aboutPage.openOriginal')"><ExternalLink :size="20" /></a>
+            <div><a :href="currentCertificate.pdf || currentCertificate.image" target="_blank" rel="noopener noreferrer" :aria-label="t('aboutPage.openOriginal')"><ExternalLink :size="20" /></a>
             <button ref="closeRef" type="button" @click="closeCertificate" :aria-label="t('common.close')"><X :size="22" /></button></div></div>
           <div class="certificate-lightbox-image"><img :src="currentCertificate.image" :alt="t(currentCertificate.titleKey)" /></div>
         </section>
